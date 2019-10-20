@@ -14,5 +14,6 @@ LazyData: true
 Imports: 
     dplyr,
     janitor,
-    magrittr
+    magrittr,
+    readr
 RoxygenNote: 6.1.1
