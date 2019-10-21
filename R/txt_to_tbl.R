@@ -5,7 +5,6 @@
 #' @return A data frame tibble
 #' @export
 #'
-#' @examples
 #'
 #'
 txt_to_tbl <- function(txt_file){

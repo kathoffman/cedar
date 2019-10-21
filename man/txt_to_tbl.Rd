@@ -15,7 +15,3 @@ A data frame tibble
 \description{
 Import a txt file from SQL data base and turn into a tidied tibble dataframe
 }
-\examples{
-
-
-}
