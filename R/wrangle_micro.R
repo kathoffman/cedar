@@ -2,7 +2,7 @@
 #'
 #' @description This function is to help CEDAR-users wrangle the raw microbiology data table according to standards established by Kevin Ackerman without the entire R script.
 #'
-#' @param path A path to a txt file containing the raw data from CEDAR's SQL MICROBIOLOGY_LABS table
+#' @param dat_micro A data frame or tibble object of raw SQL microbiology data
 #'
 #' @return A tibble appended with columns `test_type`, `source`, `organism` and `oranism_type`
 #' @export
@@ -10,12 +10,7 @@
 #' @importFrom dplyr %>%
 #'
 #' @examples
-micro_wrangle <- function(path){
-
-  dat_micro <- readr::read_delim(path,
-                          delim="\t",
-                          na = c("","NA","NULL"),
-                          guess_max = 1000000)
+micro_wrangle <- function(dat_micro){
 
   dat_micro %>%
     janitor::clean_names() %>%

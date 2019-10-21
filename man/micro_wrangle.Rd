@@ -4,10 +4,10 @@
 \alias{micro_wrangle}
 \title{Wrangle the CEDAR database's raw SQL Microbiology Table to match categorization criteria established by Kevin Ackerman, MD}
 \usage{
-micro_wrangle(path)
+micro_wrangle(dat_micro)
 }
 \arguments{
-\item{path}{A path to a txt file containing the raw data from CEDAR's SQL MICROBIOLOGY_LABS table}
+\item{dat_micro}{A data frame or tibble object of raw SQL microbiology data}
 }
 \value{
 A tibble appended with columns `test_type`, `source`, `organism` and `oranism_type`
