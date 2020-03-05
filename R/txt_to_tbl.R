@@ -11,5 +11,6 @@ txt_to_tbl <- function(txt_file){
   readr::read_delim(txt_file,
                   delim="\t",
                   na = c("","NA","NULL"),
-                  guess_max = 1000000)
+                  guess_max = 1000000) %>%
+    janitor::clean_names()
 }
