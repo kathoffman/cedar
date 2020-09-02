@@ -1,3 +1,10 @@
+#' Adding the test type - micro internal function
+#'
+#' @param micro_df data frame of micro data
+#'
+#' @return
+#' @importFrom dplyr %>% case_when mutate
+#'
 add_test_type <- function(micro_df) {
   dplyr::mutate(micro_df,
                 test_type = dplyr::case_when(culture_type == "ACANTHAMOEBA CULTURE" & test_name == "FINAL REPORT" ~ "Culture",

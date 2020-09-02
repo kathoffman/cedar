@@ -1,3 +1,9 @@
+#' micro internal function
+#'
+#' @param micro_df data frame of micro data
+#'
+#' @return
+#' @importFrom dplyr %>% case_when mutate
 add_source <- function(micro_df) {
   dplyr::mutate(micro_df,
                 source = dplyr::case_when(culture_type == "ACANTHAMOEBA CULTURE" & test_name == "FINAL REPORT" ~ "Body Fluid",

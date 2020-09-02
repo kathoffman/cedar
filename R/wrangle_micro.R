@@ -8,8 +8,6 @@
 #' @export
 #'
 #' @importFrom dplyr %>%
-
-#' @examples
 wrangle_micro <- function(micro_df){
   micro_df %>%
     add_test_type() %>%
